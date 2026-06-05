@@ -1,9 +1,10 @@
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts'
+import styles from './HourlyChart.module.css'
 
 function HourlyChart({ hourlyToday }) {
   return (
-    <section className="chart-section">
-      <h2 className="section-title">Hourly Output Today</h2>
+    <section className={styles.section}>
+      <h2 className={styles.title}>Hourly Output Today</h2>
       <ResponsiveContainer width="100%" height={300}>
         <LineChart data={hourlyToday}>
           <CartesianGrid strokeDasharray="3 3" />

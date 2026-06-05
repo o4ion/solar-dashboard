@@ -1,9 +1,10 @@
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts'
+import styles from './WeeklyChart.module.css'
 
 function WeeklyChart({ weeklyData }) {
   return (
-    <section className="chart-section">
-      <h2 className="section-title">Weekly Output</h2>
+    <section className={styles.section}>
+      <h2 className={styles.title}>Weekly Output</h2>
       <ResponsiveContainer width="100%" height={300}>
         <BarChart data={weeklyData}>
           <CartesianGrid strokeDasharray="3 3" />

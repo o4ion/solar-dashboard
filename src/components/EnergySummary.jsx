@@ -1,17 +1,19 @@
+import styles from './EnergySummary.module.css'
+
 function SummaryTile({ label, value, unit }) {
   return (
-    <div className="summary-tile">
-      <p className="summary-tile__label">{label}</p>
-      <p className="summary-tile__value">{value}<span className="summary-tile__unit"> {unit}</span></p>
+    <div className={styles.tile}>
+      <p className={styles.label}>{label}</p>
+      <p className={styles.value}>{value}<span className={styles.unit}> {unit}</span></p>
     </div>
   )
 }
 
 function EnergySummary({ energySummary }) {
   return (
-    <section className="energy-summary">
-      <h2 className="section-title">Energy Summary</h2>
-      <div className="energy-summary__grid">
+    <section className={styles.section}>
+      <h2 className={styles.title}>Energy Summary</h2>
+      <div className={styles.grid}>
         <SummaryTile label="Today's Energy" value={energySummary.todayKWh} unit="kWh" />
         <SummaryTile label="This Week" value={energySummary.thisWeekKWh} unit="kWh" />
         <SummaryTile label="This Month" value={energySummary.thisMonthKWh} unit="kWh" />

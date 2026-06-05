@@ -1,0 +1,41 @@
+.section {
+  margin-bottom: 24px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background-color: var(--bg-card);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.label {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+
+.value {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.unit {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+}

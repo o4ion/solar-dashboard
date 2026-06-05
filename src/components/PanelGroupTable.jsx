@@ -1,14 +1,16 @@
+import styles from './PanelGroupTable.module.css'
+
 function PanelGroupTable({ panelGroups }) {
   function getRowClass(status) {
-    if (status === 'Offline') return 'table-row--offline'
-    if (status === 'Degraded') return 'table-row--degraded'
+    if (status === 'Offline') return styles.offline
+    if (status === 'Degraded') return styles.degraded
     return ''
   }
 
   return (
-    <section className="panel-table-section">
-      <h2 className="section-title">Panel Groups</h2>
-      <table className="panel-table">
+    <section className={styles.section}>
+      <h2 className={styles.title}>Panel Groups</h2>
+      <table className={styles.table}>
         <thead>
           <tr>
             <th>Group</th>
