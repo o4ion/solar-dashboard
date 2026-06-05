@@ -1,16 +1,47 @@
-# React + Vite
+# Solar Power Monitoring Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A read-only Solar Power Monitoring Dashboard built with React and Vite. All data is hardcoded. No backend, no API calls.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Site header with live status badge
+- Live stats cards showing current output, efficiency, battery level and more
+- Energy summary tiles for today, this week, this month and lifetime
+- Hourly output line chart using Recharts
+- Weekly output bar chart using Recharts
+- Panel group table with color coded status rows
+- Dark and light mode toggle using React Context API
 
-## React Compiler
+## Screenshots
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+![Dashboard Dark Mode 1](./screenshots/Dark/dark1.png)
+![Dashboard Dark Mode 2](./screenshots/Dark/dark2.png)
+![Dashboard Light Mode 1](./screenshots/Light/light1.png)
+![Dashboard Light Mode 2](./screenshots/Light/light2.png)
 
-## Expanding the ESLint configuration
+## How to Run
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clone the repo
+2. Navigate into the project folder
+3. Install dependencies
+4. Start the dev server
+
+```bash
+git clone https://github.com/o4ion/solar-dashboard.git
+cd solar-dashboard
+npm install
+npm run dev
+```
+
+Then open http://localhost:5173 in your browser.
+
+## Tech Stack
+
+- React
+- Vite
+- Recharts
+- CSS Variables for theming
+
+## Decision Note
+
+I structured the dashboard by giving each section its own component and passing all data via props from App.jsx. This keeps each component focused on one job and makes the code easy to follow. For dark mode I used React Context API so the theme state is accessible anywhere without prop drilling. I chose Recharts for the charts because it integrates naturally with React and handles responsiveness out of the box.
